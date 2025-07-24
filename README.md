@@ -1,2 +1,15 @@
 # Kinova-Gen3-Control
-Implementation of Famous Controllers on Kinova-Gen3 Manipulator.
+
+TODO
+
+1. Create Kinova Gen3 URDF file
+2. Import to Simscape and Create a Template Kinova Gen3 Model
+3. Generate the Dynamics Model using ManiDyn
+4. Implement the Following Control Algorithms
+    - PD + Gravity Compensation
+    - Inverse Dynamics Control
+    - Adaptive Control
+    - Sliding Mode Control
+    - Neural Adaptive Control
+    - Impedance Control
+
