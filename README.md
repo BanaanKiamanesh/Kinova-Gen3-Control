@@ -11,7 +11,9 @@ TODO
     - Inverse Dynamics Control
     - Robust Inverse Dynamics Control
     - Adaptive Control
+    - Adaptive Control with Internal PID Architecture
     - Sliding Mode Control
     - Neural Adaptive Control
+    - Force Control
     - Impedance Control
 
