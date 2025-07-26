@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot name="Robot">
+    <link name="Bracelet_Link">
+        <inertial>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="-0.00002788 -0.00521620 -0.02269200"/>
+            <mass value="0.31408000"/>
+            <inertia ixx="0.00022640" ixy="-0.00000049" ixz="-0.00000026" iyy="0.00015697" iyz="-0.00004561" izz="0.00025981"/>
+        </inertial>
+        <visual>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+            <geometry>
+                <mesh filename="meshes\visual\Bracelet_Link.STL" scale="1.00000000 1.00000000 1.00000000"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.79216000 0.81961000 0.93333000 1.00000000"/>
+            </material>
+        </visual>
+        <collision>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+            <geometry>
+                <mesh filename="meshes\collision\Bracelet_Link.STL" scale="1.00000000 1.00000000 1.00000000"/>
+            </geometry>
+        </collision>
+    </link>
+    <link name="EndEffector_Link">
+        <inertial>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="-0.00017492  0.01482400 -0.62969000"/>
+            <mass value="0.00000000"/>
+            <inertia ixx="0.00000000" ixy="0.00000000" ixz="0.00000000" iyy="0.00000000" iyz="0.00000000" izz="0.00000000"/>
+        </inertial>
+    </link>
+    <link name="ForeArm_Link">
+        <inertial>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="-0.00001102 -0.07535700 -0.01408500"/>
+            <mass value="0.89500000"/>
+            <inertia ixx="0.00673390" ixy="0.00000070" ixz="-0.00000002" iyy="0.00045088" iyz="0.00038999" izz="0.00686130"/>
+        </inertial>
+        <visual>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+            <geometry>
+                <mesh filename="meshes\visual\ForeArm_Link.STL" scale="1.00000000 1.00000000 1.00000000"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.79216000 0.81961000 0.93333000 1.00000000"/>
+            </material>
+        </visual>
+        <collision>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+            <geometry>
+                <mesh filename="meshes\collision\ForeArm_Link.STL" scale="1.00000000 1.00000000 1.00000000"/>
+            </geometry>
+        </collision>
+    </link>
+    <link name="HalfArm1_Link">
+        <inertial>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="-0.00002782 -0.09729800 -0.01269300"/>
+            <mass value="1.10600000"/>
+            <inertia ixx="0.00891680" ixy="-0.00000290" ixz="-0.00000017" iyy="0.00073106" iyz="0.00051768" izz="0.00904160"/>
+        </inertial>
+        <visual>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+            <geometry>
+                <mesh filename="meshes\visual\HalfArm1_Link.STL" scale="1.00000000 1.00000000 1.00000000"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.89804000 0.91765000 0.92941000 1.00000000"/>
+            </material>
+        </visual>
+        <collision>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+            <geometry>
+                <mesh filename="meshes\collision\HalfArm1_Link.STL" scale="1.00000000 1.00000000 1.00000000"/>
+            </geometry>
+        </collision>
+    </link>
+    <link name="HalfArm2_Link">
+        <inertial>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00002981 -0.00623910 -0.11552000"/>
+            <mass value="1.10600000"/>
+            <inertia ixx="0.00887070" ixy="0.00000023" ixz="-0.00000332" iyy="0.00900340" iyz="-0.00050415" izz="0.00071859"/>
+        </inertial>
+        <visual>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+            <geometry>
+                <mesh filename="meshes\visual\HalfArm2_Link.STL" scale="1.00000000 1.00000000 1.00000000"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.89804000 0.91765000 0.92941000 1.00000000"/>
+            </material>
+        </visual>
+        <collision>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+            <geometry>
+                <mesh filename="meshes\collision\HalfArm2_Link.STL" scale="1.00000000 1.00000000 1.00000000"/>
+            </geometry>
+        </collision>
+    </link>
+    <link name="Shoulder_Link">
+        <inertial>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="-0.00002289 -0.01051100 -0.07515900"/>
+            <mass value="2.00900000"/>
+            <inertia ixx="0.00450810" ixy="-0.00000086" ixz="-0.00000190" iyy="0.00476950" iyz="-0.00045534" izz="0.00139030"/>
+        </inertial>
+        <visual>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+            <geometry>
+                <mesh filename="meshes\visual\Shoulder_Link.STL" scale="1.00000000 1.00000000 1.00000000"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.86667000 0.86667000 0.89020000 1.00000000"/>
+            </material>
+        </visual>
+        <collision>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+            <geometry>
+                <mesh filename="meshes\collision\Shoulder_Link.STL" scale="1.00000000 1.00000000 1.00000000"/>
+            </geometry>
+        </collision>
+    </link>
+    <link name="Wrist1_Link">
+        <inertial>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="-0.00000033 -0.00961700 -0.06296800"/>
+            <mass value="0.65400000"/>
+            <inertia ixx="0.00133110" ixy="-0.00000000" ixz="-0.00000000" iyy="0.00132820" iyz="-0.00022936" izz="0.00030696"/>
+        </inertial>
+        <visual>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+            <geometry>
+                <mesh filename="meshes\visual\Wrist1_Link.STL" scale="1.00000000 1.00000000 1.00000000"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.79216000 0.81961000 0.93333000 1.00000000"/>
+            </material>
+        </visual>
+        <collision>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+            <geometry>
+                <mesh filename="meshes\collision\Wrist1_Link.STL" scale="1.00000000 1.00000000 1.00000000"/>
+            </geometry>
+        </collision>
+    </link>
+    <link name="Wrist2_Link">
+        <inertial>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="-0.00000034 -0.04404300 -0.00978040"/>
+            <mass value="0.65400000"/>
+            <inertia ixx="0.00134220" ixy="0.00000000" ixz="-0.00000000" iyy="0.00031025" iyz="0.00023506" izz="0.00133600"/>
+        </inertial>
+        <visual>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+            <geometry>
+                <mesh filename="meshes\visual\Wrist2_Link.STL" scale="1.00000000 1.00000000 1.00000000"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.79216000 0.81961000 0.93333000 1.00000000"/>
+            </material>
+        </visual>
+        <collision>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+            <geometry>
+                <mesh filename="meshes\collision\Wrist2_Link.STL" scale="1.00000000 1.00000000 1.00000000"/>
+            </geometry>
+        </collision>
+    </link>
+    <link name="base_link">
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        <visual>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+            <geometry>
+                <mesh filename="meshes\visual\base_link.STL" scale="1.00000000 1.00000000 1.00000000"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.79216000 0.81961000 0.93333000 1.00000000"/>
+            </material>
+        </visual>
+        <collision>
+            <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+            <geometry>
+                <mesh filename="meshes\collision\base_link.STL" scale="1.00000000 1.00000000 1.00000000"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Actuator1" type="revolute">
+        <parent link="base_link"/>
+        <child link="Shoulder_Link"/>
+        <origin rpy="-3.14158531  0.00000000  0.00000000" xyz="0.00000000 0.00000000 0.15643000"/>
+        <axis xyz="0.00000000 0.00000000 1.00000000"/>
+        <limit lower="-Inf" upper="Inf" effort="0" velocity="0"/>
+    </joint>
+    <joint name="Actuator2" type="revolute">
+        <parent link="Shoulder_Link"/>
+        <child link="HalfArm1_Link"/>
+        <origin rpy="1.57080000 0.00000000 0.00000000" xyz="0.00000000  0.00537500 -0.12838000"/>
+        <axis xyz="0.00000000 0.00000000 1.00000000"/>
+        <limit lower="-2.20000000" upper="2.20000000" effort="0" velocity="0"/>
+    </joint>
+    <joint name="Actuator3" type="revolute">
+        <parent link="HalfArm1_Link"/>
+        <child link="HalfArm2_Link"/>
+        <origin rpy="-1.57080000  0.00000000  0.00000000" xyz="0.00000000 -0.21038000 -0.00637500"/>
+        <axis xyz="0.00000000 0.00000000 1.00000000"/>
+        <limit lower="-Inf" upper="Inf" effort="0" velocity="0"/>
+    </joint>
+    <joint name="Actuator4" type="revolute">
+        <parent link="HalfArm2_Link"/>
+        <child link="ForeArm_Link"/>
+        <origin rpy="1.57080000 0.00000000 0.00000000" xyz="0.00000000  0.00637500 -0.21038000"/>
+        <axis xyz="0.00000000 0.00000000 1.00000000"/>
+        <limit lower="-2.56560000" upper="2.56560000" effort="0" velocity="0"/>
+    </joint>
+    <joint name="Actuator5" type="revolute">
+        <parent link="ForeArm_Link"/>
+        <child link="Wrist1_Link"/>
+        <origin rpy="-1.57080000  0.00000000  0.00000000" xyz="0.00000000 -0.20843000 -0.00637500"/>
+        <axis xyz="0.00000000 0.00000000 1.00000000"/>
+        <limit lower="-Inf" upper="Inf" effort="0" velocity="0"/>
+    </joint>
+    <joint name="Actuator6" type="revolute">
+        <parent link="Wrist1_Link"/>
+        <child link="Wrist2_Link"/>
+        <origin rpy="1.57080000 0.00000000 0.00000000" xyz="0.00000000  0.00017505 -0.10593000"/>
+        <axis xyz="0.00000000 0.00000000 1.00000000"/>
+        <limit lower="-2.05000000" upper="2.05000000" effort="0" velocity="0"/>
+    </joint>
+    <joint name="Actuator7" type="revolute">
+        <parent link="Wrist2_Link"/>
+        <child link="Bracelet_Link"/>
+        <origin rpy="-1.57080000  0.00000000  0.00000000" xyz="0.00000000 -0.10593000 -0.00017505"/>
+        <axis xyz="0.00000000 0.00000000 1.00000000"/>
+        <limit lower="-Inf" upper="Inf" effort="0" velocity="0"/>
+    </joint>
+    <joint name="Endeffector" type="fixed">
+        <parent link="Bracelet_Link"/>
+        <child link="EndEffector_Link"/>
+        <origin rpy="-3.14158531  0.00000000  0.00000000" xyz="0.00000000  0.00000000 -0.05952500"/>
+        <axis xyz="100"/>
+    </joint>
+</robot>
