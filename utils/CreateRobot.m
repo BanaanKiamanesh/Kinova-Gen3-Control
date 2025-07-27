@@ -55,7 +55,8 @@ I{7} = [0.00022640, -4.9e-7,  -2.6e-7; -4.9e-7, 0.00015697,  -4.561e-5;  -2.6e-7
 
 % Build DynStruct
 DynPar = DynStruct('Mass',   M, 'Inertia', I, ...
-                    'COM', COM,      'DH', DH);
+                    'COM', COM,      'DH', DH, ...
+                    'Fv', [0.2 0.2 0.2 0.2 0.2 0.2 0.2]);
 
 
 % Create the Kinematics and Dynamics Obj
