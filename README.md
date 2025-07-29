@@ -15,8 +15,9 @@
 - [x] Import to Simscape and Create a Template Kinova Gen3 Model
 - [x] Generate the Dynamics Model using ManiDyn
 - [ ] Implement the Following Control Algorithms
-    - [ ] PID Control
-    - [ ] PD + Gravity Compensation
+    - [x] PID Control
+    - [x] PD + Gravity Compensation
+    - [x] PD + Feedback Linearization
     - [ ] Inverse Dynamics Control
     - [ ] Robust Inverse Dynamics Control
     - [ ] Adaptive Control
