@@ -18,7 +18,7 @@
     - [x] PID Control
     - [x] PD + Gravity Compensation
     - [x] PD + Feedback Linearization
-    - [ ] Inverse Dynamics Control
+    - [x] Inverse Dynamics Control
     - [ ] Robust Inverse Dynamics Control
     - [ ] Adaptive Control
     - [ ] Adaptive Control with Internal PID Architecture
