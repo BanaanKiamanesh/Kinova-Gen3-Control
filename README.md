@@ -20,10 +20,7 @@
     - [x] PD + Feedback Linearization
     - [x] Inverse Dynamics Control
     - [ ] Robust Inverse Dynamics Control
-    - [ ] Adaptive Control
-    - [ ] Adaptive Control with Internal PID Architecture
     - [x] Sliding Mode Control
-    - [ ] Neural Adaptive Control
     - [ ] Force Control
     - [ ] Impedance Control
 
