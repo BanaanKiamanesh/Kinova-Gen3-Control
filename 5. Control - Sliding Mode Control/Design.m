@@ -3,8 +3,8 @@ close all
 clc
 
 %% Controller Parameters
-Lambda = 50000;
-Eta = 50000;
+Lambda = [500000 * ones(2, 1); 50000 * ones(5, 1)];
+Eta = [500000 * ones(2, 1); 50000 * ones(5, 1)];
 
 %% Initial Conditions
 % Dynamical Model
