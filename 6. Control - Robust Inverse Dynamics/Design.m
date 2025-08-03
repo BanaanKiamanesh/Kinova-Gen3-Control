@@ -5,7 +5,7 @@ clc
 %% Controller Parameters
 n  = 7;
 Kp = 250000;
-Kd = 1000;
+Kd = 50000;
 
 % Comment out for SM
 % Kp = 500000;
@@ -24,7 +24,18 @@ gamma1  = 3.5; gamma2 = 1.8; gamma3 = 5;
 
 %% Initial Conditions
 % Dynamical Model
-qInitDM = [rand(n, 1); zeros(n, 1)];
+qInitDM = [zeros(14, 1)];
 
 % Simscape Multi-Body Model
-qInitSM = [rand(n, 1); zeros(n, 1)];
+qInitSM = [zeros(14, 1)];
+
+%% Derivative Filter(High Pass as Smooth Derivative)
+W = 2 * pi * 50;
+Zeta = 1 / sqrt(2);
+
+DF.num = [W^2, 0];
+DF.den = [1, 2*Zeta*W, W^2];
+
+%% Load Robot for Inverse Kinematics
+robot = loadrobot('kinovaGen3');
+robot.DataFormat = 'column';
