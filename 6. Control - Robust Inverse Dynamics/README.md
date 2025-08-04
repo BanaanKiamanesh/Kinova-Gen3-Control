@@ -8,11 +8,28 @@
 | $\dot q,\ddot q$                                                                                                                                | velocities, accelerations              |
 | $q_d(t)$                                                                                                                                        | desired trajectory                     |
 | $\tilde q=q-q_d,\ \dot{\tilde q}=\dot q-\dot q_d$                                                                                               | tracking errors                        |
-| $B(q),\,C(q,\dot q)\dot q,\,g(q)$                                                                                                               | inertia, Coriolis/centrifugal, gravity nominal terms|
+| $B(q),C(q,\dot q)\dot q,g(q)$                                                                                                               | inertia, Coriolis/centrifugal, gravity nominal terms|
 | $\hat B(q),\hat C(q,\dot q),\hat g(q)$                                                                                                                          | calculated/estimated terms                    |
 | $a_q$                                                                                                                                           | commanded joint acceleration           |
 | $\delta_a$                                                                                                                                      | robust term                            |
-| $e=\begin{bmatrix}\tilde q\\ \dot{\tilde q}\end{bmatrix}$, $A=\begin{bmatrix}0&I\\-K_p&-K_d\end{bmatrix}$, $B=\begin{bmatrix}0\\I\end{bmatrix}$ | error/state matrices                   |
+
+Also, 
+
+$$ e=\begin{bmatrix}
+\tilde q       \\ 
+\dot{\tilde q} \\
+\end{bmatrix}, 
+𝒜=\begin{bmatrix}
+0&I\\
+-K_p&-K_d\\
+\end{bmatrix},
+ℬ=\begin{bmatrix}
+0\\
+I\\
+\end{bmatrix} $$
+
+
+represents error and state matrices respectively.
 
 ---
 
@@ -27,13 +44,13 @@ $$
 #### 2) Control law (inverse dynamics with robustifying term)
 
 $$
-\boxed{\,u=\hat B(q)\,a_q+\hat C(q,\dot q)\dot q+\hat g(q)\,}
+\boxed{u=\hat B(q)a_q+\hat C(q,\dot q)\dot q+\hat g(q)}
 $$
 
 with
 
 $$
-a_q=\ddot q_d-K_p\,\tilde q-K_d\,\dot{\tilde q}+\delta_a,
+a_q=\ddot q_d-K_p\tilde q-K_d\dot{\tilde q}+\delta_a,
 $$
 
 where $K_p,K_d\succ0$.&#x20;
@@ -46,7 +63,7 @@ Model mismatch enters as
 
 $$
 \ddot q = a_q+\eta,\quad 
-\eta=E\,a_q + B^{-1}\!\big(\tilde C\,\dot q+\tilde g\big),\quad
+\eta=Ea_q + B^{-1}\big(\tilde C\dot q+\tilde g\big),\quad
 E=B^{-1}\tilde B,
 $$
 
@@ -60,7 +77,7 @@ $$
 Choose
 
 $$
-\boxed{\ \rho(e,t)\ \ge\ \dfrac{r_1\|e\|+r_2\|e\|^2+r_3}{\,1-\alpha\,}\ }
+\boxed{\ \rho(e,t)\ \ge\ \dfrac{r_1\|e\|+r_2\|e\|^2+r_3}{1-\alpha}\ }
 $$
 
 and set
@@ -68,13 +85,13 @@ and set
 $$
 \boxed{\ 
 \delta_a=
--\rho\,\frac{B^{\!\top}Pe}{\|B^{\!\top}Pe\|}\quad(\|B^{\!\top}Pe\|>\varepsilon),\qquad
+-\rho\frac{ℬ^{\top}Pe}{\|ℬ^{\top}Pe\|}\quad(\|ℬ^{\top}Pe\|>\varepsilon),\qquad
 \delta_a=
--\frac{\rho}{\varepsilon}\,B^{\!\top}Pe\quad(\|B^{\!\top}Pe\|\le\varepsilon)
+-\frac{\rho}{\varepsilon}ℬ^{\top}Pe\quad(\|ℬ^{\top}Pe\|\le\varepsilon)
 \ }
 $$
 
-where $P\succ0$ solves $A^{\!\top}P+PA=-Q,\ Q\succ0$ and $\varepsilon>0$ defines a boundary layer (reduces chattering). With these choices the closed loop is uniformly ultimately bounded (UUB).&#x20;
+where $P\succ0$ solves $𝒜^{\top}P+P𝒜=-Q,\ Q\succ0$ and $\varepsilon>0$ defines a boundary layer (reduces chattering). With these choices the closed loop is uniformly ultimately bounded (UUB).&#x20;
 
 ---
 
