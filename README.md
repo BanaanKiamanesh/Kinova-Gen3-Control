@@ -5,10 +5,10 @@ A comprehensive MATLAB/Simulink framework for controlling the Kinova Gen3 7-DOF 
 ## Requirements
 
 - **ManiDyn** toolbox ([GitHub link](https://github.com/BanaanKiamanesh/ManiDyn)) - **Core dependency for robot dynamics computation**
-- MATLAB R2021a or newer
-- MATLAB **Robotics** Toolbox
-- **Symbolic Math** Toolbox
 - **Simscape Multibody**
+- **Robotics** Toolbox
+- **Symbolic Math** Toolbox
+- MATLAB R2021a or newer
 
 ---
 
@@ -20,10 +20,12 @@ A comprehensive MATLAB/Simulink framework for controlling the Kinova Gen3 7-DOF 
 - **Robot Data Package**: Comprehensive robot specifications and parameters
 
 ### Dynamics & Kinematics
+
 **All robot dynamics are computed using the ManiDyn toolbox**, providing:
+
 - **Forward Kinematics**: MEX-compiled functions for fast FK computation
 - **Jacobian Matrices**: Efficient Jacobian calculation functions
-- **Dynamics**: Complete dynamic model with Coriolis, centrifugal, and gravity terms along with the system ODE Function ready for simulation
+- **Dynamics**: Complete dynamic model with Mass Matrix, Coriolis Matrix, and gravity terms along with the system ODE Function ready for simulation
 
 ### Control Algorithms
 
@@ -37,6 +39,7 @@ The repository implements the following control algorithms:
 6. **Robust Inverse Dynamics Control**
 
 ### Utilities & Tools
+
 - **CreateRobot.m**: Automated robot model generation script using ManiDyn
 - **MEX Functions**: High-performance compiled functions for real-time control
 - **Design Scripts**: Parameter tuning and analysis tools for each controller
@@ -47,7 +50,7 @@ The repository implements the following control algorithms:
 
 1. Install all required MATLAB toolboxes
 2. Clone the ManiDyn toolbox repository
-3. Run `utils/CreateRobot.m` to generate robot models using ManiDyn
+3. Run `utils/CreateRobot.m` to generate robot models using ManiDyn and Robotics Toolbox
 4. Open the desired control algorithm folder
 5. Follow the README in each control folder for specific implementation details
 
@@ -58,4 +61,3 @@ This repository serves as a comprehensive reference for advanced robotic control
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
