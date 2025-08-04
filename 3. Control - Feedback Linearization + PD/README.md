@@ -7,7 +7,7 @@
 | $q\in\mathbb{R}^{n}$                                        | joint positions                  |
 | $\dot{q},\ \ddot{q}$                                        | joint velocities, accelerations  |
 | $q_{d}(t)$                                                  | desired joint trajectory         |
-| $\tilde q = q_{d}-q,\;\;\dot{\tilde q} = \dot q_{d}-\dot q$ | position / velocity errors       |
+| $\tilde q = q_{d}-q, \dot{\tilde q} = \dot q_{d}-\dot q$ | position / velocity errors       |
 | $B(q)$                                                      | positive-definite inertia matrix |
 | $C(q,\dot q)\dot q$                                         | Coriolis & centrifugal terms     |
 | $g(q)$                                                      | gravity vector                   |
@@ -26,14 +26,14 @@ $$
 #### 2. Control law (exact feedback linearisation)
 
 $$
-\boxed{\,u = B(q)\!\left[\,\ddot q_{d}+K_{D}\,\dot{\tilde q}+K_{P}\,\tilde q\,\right] + C(q,\dot q)\,\dot q + g(q)\,}
+\boxed{u = B(q)\left[\ddot q_{d}+K_{D}\dot{\tilde q}+K_{P}\tilde q \right] + C(q,\dot q)\dot q + g(q)}
 $$
 
 * $K_{P},K_{D}\in\mathbb{R}^{n\times n}$: symmetric positive-definite (often diagonal).
 * The bracketed term is a **virtual acceleration** that shapes the closed-loop error as
 
 $$
-\ddot{\tilde q}+K_{D}\,\dot{\tilde q}+K_{P}\,\tilde q = 0,
+\ddot{\tilde q}+K_{D} \dot{\tilde q}+K_{P} \tilde q = 0
 $$
 
 i.e. $n$ uncoupled, critically damped second-order systems.
