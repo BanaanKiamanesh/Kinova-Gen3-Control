@@ -11,14 +11,14 @@
 | $B(q)$                | positive-definite inertia matrix |
 | $C(q,\dot{q})\dot{q}$ | Coriolis/centrifugal terms       |
 | $g(q)$                | gravity vector                   |
-| $u$                   | commanded joint torques          |
+| $\tau$                | commanded joint torques          |
 
 ---
 
 #### 1. Robot dynamics
 
 $$
-B(q)\,\ddot{q}+C(q,\dot{q})\,\dot{q}+g(q)=u
+B(q)\ddot{q}+C(q,\dot{q})\dot{q}+g(q)=\tau
 $$
 
 ---
@@ -26,7 +26,7 @@ $$
 #### 2. Control law
 
 $$
-u(t)=g(q)+K_{P}\,\tilde{q}+K_{I}\!\int_{0}^{t}\tilde{q}(\tau)\,d\tau-K_{D}\,\dot{q}
+u(t)=g(q)+K_{P} \tilde{q}+K_{I}\int_{0}^{t}\tilde{q}(\tau)d\tau-K_{D}\dot{q}
 $$
 
 $K_{P},K_{I},K_{D}$ are symmetric positive-definite gain matrices.
